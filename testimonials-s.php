@@ -9,6 +9,9 @@ Author: Systemo
 Author URI: http://systemo.biz
 */
 
+include_once 'includes/testimonials-swiper.php';
+include_once 'includes/meta.php';
+
 
 add_action('init', 'cptui_register_my_cpt_testimonial');
 function cptui_register_my_cpt_testimonial() {
