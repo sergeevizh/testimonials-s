@@ -3,15 +3,16 @@
 Plugin Name: sTestimonials
 Plugin URI: https://github.com/systemo-biz/testimonials-s
 Description: Testimonials by Systemo for WordPress
-Version: 0.1
+Version: 20150115
 License: GPL
 Author: Systemo
 Author URI: http://systemo.biz
+GitHub Plugin URI: https://github.com/systemo-biz/testimonials-s
+GitHub Branch: master
 */
 
-include_once 'includes/testimonials-swiper.php';
+include_once 'includes/sc-swiper-s/sc-swiper-s.php';
 include_once 'includes/meta.php';
-
 
 add_action('init', 'cptui_register_my_cpt_testimonial');
 function cptui_register_my_cpt_testimonial() {
