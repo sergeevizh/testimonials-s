@@ -8,13 +8,17 @@ class TestimonialsSystemo
 
   function __construct()
   {
+
+
     add_action('init', array($this, 'model_cpt'));
     add_action('init', array($this, 'model_taxonomy'));
 
     add_action( 'add_meta_boxes', array($this, 'meta_boxes_s') );
     add_action('save_post', array($this, 'save_box_data_s'));
 
+
   }
+
 
 
   //добавляем метабокс
@@ -60,35 +64,35 @@ class TestimonialsSystemo
 
   function model_cpt() {
       $labels = array(
-  		'name'                  => _x( 'Testimonials', 'Post Type General Name', 'testimonials_systemo' ),
-  		'singular_name'         => _x( 'Testimonial', 'Post Type Singular Name', 'testimonials_systemo' ),
-  		'menu_name'             => __( 'Testimonials', 'testimonials_systemo' ),
-  		'name_admin_bar'        => __( 'Testimonial', 'testimonials_systemo' ),
-  		'archives'              => __( 'Item Testimonial', 'testimonials_systemo' ),
-  		'parent_item_colon'     => __( 'Parent Item:', 'testimonials_systemo' ),
-  		'all_items'             => __( 'All Items', 'testimonials_systemo' ),
-  		'add_new_item'          => __( 'Add New Item', 'testimonials_systemo' ),
-  		'add_new'               => __( 'Add New', 'testimonials_systemo' ),
-  		'new_item'              => __( 'New Item', 'testimonials_systemo' ),
-  		'edit_item'             => __( 'Edit Item', 'testimonials_systemo' ),
-  		'update_item'           => __( 'Update Item', 'testimonials_systemo' ),
-  		'view_item'             => __( 'View Item', 'testimonials_systemo' ),
-  		'search_items'          => __( 'Search Item', 'testimonials_systemo' ),
-  		'not_found'             => __( 'Not found', 'testimonials_systemo' ),
-  		'not_found_in_trash'    => __( 'Not found in Trash', 'testimonials_systemo' ),
-  		'featured_image'        => __( 'Featured Image', 'testimonials_systemo' ),
-  		'set_featured_image'    => __( 'Set featured image', 'testimonials_systemo' ),
-  		'remove_featured_image' => __( 'Remove featured image', 'testimonials_systemo' ),
-  		'use_featured_image'    => __( 'Use as featured image', 'testimonials_systemo' ),
-  		'insert_into_item'      => __( 'Insert into item', 'testimonials_systemo' ),
-  		'uploaded_to_this_item' => __( 'Uploaded to this item', 'testimonials_systemo' ),
-  		'items_list'            => __( 'Items list', 'testimonials_systemo' ),
-  		'items_list_navigation' => __( 'Items list navigation', 'testimonials_systemo' ),
-  		'filter_items_list'     => __( 'Filter items list', 'testimonials_systemo' ),
+  		'name'                  => _x( 'Testimonials', 'Post Type General Name', 'testimonials-s' ),
+  		'singular_name'         => _x( 'Testimonial', 'Post Type Singular Name', 'testimonials-s' ),
+  		'menu_name'             => __( 'Testimonials', 'testimonials-s' ),
+  		'name_admin_bar'        => __( 'Testimonial', 'testimonials-s' ),
+  		'archives'              => __( 'Item Testimonial', 'testimonials-s' ),
+  		'parent_item_colon'     => __( 'Parent Item:', 'testimonials-s' ),
+  		'all_items'             => __( 'All Items', 'testimonials-s' ),
+  		'add_new_item'          => __( 'Add New Item', 'testimonials-s' ),
+  		'add_new'               => __( 'Add New', 'testimonials-s' ),
+  		'new_item'              => __( 'New Item', 'testimonials-s' ),
+  		'edit_item'             => __( 'Edit Item', 'testimonials-s' ),
+  		'update_item'           => __( 'Update Item', 'testimonials-s' ),
+  		'view_item'             => __( 'View Item', 'testimonials-s' ),
+  		'search_items'          => __( 'Search Item', 'testimonials-s' ),
+  		'not_found'             => __( 'Not found', 'testimonials-s' ),
+  		'not_found_in_trash'    => __( 'Not found in Trash', 'testimonials-s' ),
+  		'featured_image'        => __( 'Featured Image', 'testimonials-s' ),
+  		'set_featured_image'    => __( 'Set featured image', 'testimonials-s' ),
+  		'remove_featured_image' => __( 'Remove featured image', 'testimonials-s' ),
+  		'use_featured_image'    => __( 'Use as featured image', 'testimonials-s' ),
+  		'insert_into_item'      => __( 'Insert into item', 'testimonials-s' ),
+  		'uploaded_to_this_item' => __( 'Uploaded to this item', 'testimonials-s' ),
+  		'items_list'            => __( 'Items list', 'testimonials-s' ),
+  		'items_list_navigation' => __( 'Items list navigation', 'testimonials-s' ),
+  		'filter_items_list'     => __( 'Filter items list', 'testimonials-s' ),
   	);
   	$args = array(
-  		'label'                 => __( 'Testimonial', 'testimonials_systemo' ),
-  		'description'           => __( 'Testimonials for WordPress', 'testimonials_systemo' ),
+  		'label'                 => __( 'Testimonial', 'testimonials-s' ),
+  		'description'           => __( 'Testimonials for WordPress', 'testimonials-s' ),
   		'labels'                => $labels,
   		'supports'              => array( ),
   		'hierarchical'          => false,
@@ -112,26 +116,26 @@ class TestimonialsSystemo
   function model_taxonomy(){
 
     $labels = array(
-  		'name'                       => _x( 'Testimonials', 'Taxonomy General Name', 'testimonials_systemo' ),
-  		'singular_name'              => _x( 'Testimonial', 'Taxonomy Singular Name', 'testimonials_systemo' ),
-  		'menu_name'                  => __( 'Taxonomy', 'testimonials_systemo' ),
-  		'all_items'                  => __( 'All Items', 'testimonials_systemo' ),
-  		'parent_item'                => __( 'Parent Item', 'testimonials_systemo' ),
-  		'parent_item_colon'          => __( 'Parent Item:', 'testimonials_systemo' ),
-  		'new_item_name'              => __( 'New Item Name', 'testimonials_systemo' ),
-  		'add_new_item'               => __( 'Add New', 'testimonials_systemo' ),
-  		'edit_item'                  => __( 'Edit Item', 'testimonials_systemo' ),
-  		'update_item'                => __( 'Update Item', 'testimonials_systemo' ),
-  		'view_item'                  => __( 'View Item', 'testimonials_systemo' ),
-  		'separate_items_with_commas' => __( 'Separate items with commas', 'testimonials_systemo' ),
-  		'add_or_remove_items'        => __( 'Add or remove items', 'testimonials_systemo' ),
-  		'choose_from_most_used'      => __( 'Choose from the most used', 'testimonials_systemo' ),
-  		'popular_items'              => __( 'Popular Items', 'testimonials_systemo' ),
-  		'search_items'               => __( 'Search Items', 'testimonials_systemo' ),
-  		'not_found'                  => __( 'Not Found', 'testimonials_systemo' ),
-  		'no_terms'                   => __( 'No items', 'testimonials_systemo' ),
-  		'items_list'                 => __( 'Items list', 'testimonials_systemo' ),
-  		'items_list_navigation'      => __( 'Items list navigation', 'testimonials_systemo' ),
+  		'name'                       => _x( 'Testimonials', 'Taxonomy General Name', 'testimonials-s' ),
+  		'singular_name'              => _x( 'Testimonial', 'Taxonomy Singular Name', 'testimonials-s' ),
+  		'menu_name'                  => __( 'Taxonomy', 'testimonials-s' ),
+  		'all_items'                  => __( 'All Items', 'testimonials-s' ),
+  		'parent_item'                => __( 'Parent Item', 'testimonials-s' ),
+  		'parent_item_colon'          => __( 'Parent Item:', 'testimonials-s' ),
+  		'new_item_name'              => __( 'New Item Name', 'testimonials-s' ),
+  		'add_new_item'               => __( 'Add New', 'testimonials-s' ),
+  		'edit_item'                  => __( 'Edit Item', 'testimonials-s' ),
+  		'update_item'                => __( 'Update Item', 'testimonials-s' ),
+  		'view_item'                  => __( 'View Item', 'testimonials-s' ),
+  		'separate_items_with_commas' => __( 'Separate items with commas', 'testimonials-s' ),
+  		'add_or_remove_items'        => __( 'Add or remove items', 'testimonials-s' ),
+  		'choose_from_most_used'      => __( 'Choose from the most used', 'testimonials-s' ),
+  		'popular_items'              => __( 'Popular Items', 'testimonials-s' ),
+  		'search_items'               => __( 'Search Items', 'testimonials-s' ),
+  		'not_found'                  => __( 'Not Found', 'testimonials-s' ),
+  		'no_terms'                   => __( 'No items', 'testimonials-s' ),
+  		'items_list'                 => __( 'Items list', 'testimonials-s' ),
+  		'items_list_navigation'      => __( 'Items list navigation', 'testimonials-s' ),
   	);
   	$args = array(
   		'labels'                     => $labels,
