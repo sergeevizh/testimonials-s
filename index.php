@@ -1,6 +1,6 @@
 <?php
 /*
-Plugin Name: sTestimonials
+Plugin Name: Testimonials by Systemo
 Plugin URI: https://github.com/systemo-biz/testimonials-s
 Description: Testimonials for WordPress by Systemo
 License: GPL
@@ -9,7 +9,7 @@ Author URI: http://systemo.biz
 Text Domain: testimonials_systemo
 GitHub Plugin URI: https://github.com/systemo-biz/testimonials-s
 GitHub Branch: master
-Version: 20150115
+Version: 20151215
 */
 
 include_once 'includes/core.php';
